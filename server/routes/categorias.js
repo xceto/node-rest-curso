@@ -30,7 +30,6 @@ app.get('/categoria', verifica_token, (req, res) => {
 app.get('/categoria/:id', verifica_token, (req, res) => {
   //mostrar categoria por id.
   let id = req.params.id
-  console.log(id)
 
   Categoria.findById(id, (err, categoriaDB) => {
     if (err) {
